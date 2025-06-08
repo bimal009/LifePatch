@@ -1,11 +1,16 @@
-import React from 'react'
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+import Hero from "@/components/layout/sections/hero";
+import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <h1 className='text-primary'>Hello World</h1>
-    </div>
-  )
-}
+    <>
+      <Header />
+      <Hero />
+      <Footer />
+    </>
+  );
+};
 
-export default page
+export default page;
