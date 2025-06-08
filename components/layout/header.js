@@ -1,9 +1,17 @@
 "use client";
+
 import Link from "next/link";
-import { HeartPulse, Menu, X } from "lucide-react";
+import { useState } from "react";
+import { HeartPulse, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useState } from "react";
+
+const navLinks = [
+  { href: "/about-us", label: "About" },
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/contact", label: "Contact" },
+  { href: "/story", label: "Story" },
+];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,36 +34,24 @@ export function Header() {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex gap-6 text-sm">
-        <Link
-          href="/about"
-          className="transition-colors font-medium text-muted-foreground hover:text-foreground"
-        >
-          About
-        </Link>
-        <Link
-          href="/how-it-works"
-          className="transition-colors font-medium text-muted-foreground hover:text-foreground"
-        >
-          How It Works
-        </Link>
-        <Link
-          href="/dashboard"
-          className="transition-colors font-medium text-muted-foreground hover:text-foreground"
-        >
-          Dashboard
-        </Link>
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="transition-colors font-medium text-muted-foreground hover:text-foreground"
+          >
+            {link.label}
+          </Link>
+        ))}
       </nav>
 
       <div className="hidden md:flex items-center gap-3">
-        <Button variant="ghost" size="sm" asChild>
-          <Link href="/login">Sign In</Link>
-        </Button>
         <Button
           size="sm"
           className="bg-primary hover:bg-primary/90 text-primary-foreground"
           asChild
         >
-          <Link href="/signup">Sign Up</Link>
+          <Link href="/signin">Sign In</Link>
         </Button>
       </div>
 
@@ -63,7 +59,7 @@ export function Header() {
       <div className="md:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" aria-label="Open Menu">
               <Menu className="w-5 h-5" />
             </Button>
           </SheetTrigger>
@@ -82,43 +78,27 @@ export function Header() {
                 </span>
               </div>
 
-              <nav className="flex flex-col gap-4">
-                <Link
-                  href="/about"
-                  className="text-lg transition-colors text-foreground hover:text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/how-it-works"
-                  className="text-lg transition-colors text-foreground hover:text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  How It Works
-                </Link>
-                <Link
-                  href="/dashboard"
-                  className="text-lg transition-colors text-foreground hover:text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Dashboard
-                </Link>
+              <nav className="flex flex-col gap-4 mx-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-lg transition-colors text-foreground hover:text-primary"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </nav>
 
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="/login" onClick={() => setIsOpen(false)}>
-                    Sign In
-                  </Link>
-                </Button>
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   asChild
                 >
-                  <Link href="/signup" onClick={() => setIsOpen(false)}>
-                    Sign Up
+                  <Link href="/signin" onClick={() => setIsOpen(false)}>
+                    Sign In
                   </Link>
                 </Button>
               </div>
