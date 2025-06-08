@@ -1,10 +1,8 @@
 
-export default function RootLayout({ children }) {
+export default function MainLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <main>
         {children}
-      </body>
-    </html>
+    </main>
   );
 }
