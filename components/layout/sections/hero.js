@@ -23,7 +23,7 @@ export default function Hero() {
                     alt="Organ donation illustration"
                     width={600}
                     height={400}
-                    className="w-full h-80 object-cover"
+                    className="w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   <div className="absolute top-4 left-4 bg-card/90 shadow-lg rounded-full px-3 py-1.5 text-sm font-medium flex items-center gap-1.5 text-primary">
@@ -80,7 +80,7 @@ export default function Hero() {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <a href="/signup" className="flex items-center gap-2">
+                  <a href="/signin" className="flex items-center gap-2">
                     <Heart className="w-4 h-4" />
                     Become a Donor
                   </a>
