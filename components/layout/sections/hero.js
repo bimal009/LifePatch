@@ -23,7 +23,7 @@ export default function Hero() {
                     alt="Organ donation illustration"
                     width={600}
                     height={400}
-                    className="w-full h-80 object-cover"
+                    className="w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   <div className="absolute top-4 left-4 bg-card/90 shadow-lg rounded-full px-3 py-1.5 text-sm font-medium flex items-center gap-1.5 text-primary">
