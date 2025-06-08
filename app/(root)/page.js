@@ -1,11 +1,14 @@
-import React from 'react'
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
-}
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
+};
 
-export default page
+export default page;
