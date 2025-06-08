@@ -1,10 +1,9 @@
 "use client";
-import React from 'react';
-import { Heart, Users, Shield, Zap } from 'lucide-react';
+import React from "react";
+import { Heart, Users, Shield, Zap } from "lucide-react";
 import { signIn } from "next-auth/react";
 
 export default function SignInPage() {
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-8">
@@ -17,18 +16,22 @@ export default function SignInPage() {
             </div>
           </div>
           <h1 className="text-3xl font-bold text-gray-900">LifePatch</h1>
-          <p className="text-gray-600 text-sm">AI-Driven Organ Donor Connection Network</p>
+          <p className="text-gray-600 text-sm">
+            AI-Driven Organ Donor Connection Network
+          </p>
         </div>
 
         {/* Main Sign In Section */}
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 p-8 space-y-6">
           <div className="text-center space-y-2">
-            <h2 className="text-2xl font-semibold text-gray-800">Welcome Back</h2>
+            <h2 className="text-2xl font-semibold text-gray-800">
+              Welcome Back
+            </h2>
             <p className="text-gray-600">
               Sign in to continue saving lives through smart organ matching
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {/* Google Sign In Button */}
             <button
@@ -58,19 +61,27 @@ export default function SignInPage() {
 
             {/* Features Preview */}
             <div className="space-y-4 pt-6 border-t border-gray-100">
-              <h3 className="text-sm font-medium text-gray-700 text-center">What makes LifePatch special?</h3>
+              <h3 className="text-sm font-medium text-gray-700 text-center">
+                What makes LifePatch special?
+              </h3>
               <div className="grid grid-cols-1 gap-3">
                 <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
                   <Zap className="h-5 w-5 text-blue-600" />
-                  <span className="text-sm text-gray-700">AI-powered smart matching</span>
+                  <span className="text-sm text-gray-700">
+                    AI-powered smart matching
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
                   <Users className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-gray-700">Community-driven network</span>
+                  <span className="text-sm text-gray-700">
+                    Community-driven network
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3 p-2 rounded-lg bg-purple-50">
                   <Shield className="h-5 w-5 text-purple-600" />
-                  <span className="text-sm text-gray-700">Secure & anonymous</span>
+                  <span className="text-sm text-gray-700">
+                    Secure & anonymous
+                  </span>
                 </div>
               </div>
             </div>
@@ -80,7 +91,8 @@ export default function SignInPage() {
         {/* Footer */}
         <div className="text-center space-y-2">
           <p className="text-xs text-gray-500">
-            By signing in, you agree to help save lives through organ donation awareness
+            By signing in, you agree to help save lives through organ donation
+            awareness
           </p>
           <div className="flex items-center justify-center space-x-1 text-xs text-gray-400">
             <Heart className="h-3 w-3 fill-current text-red-400" />
