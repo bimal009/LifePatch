@@ -80,7 +80,7 @@ export default function Hero() {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <a href="/signup" className="flex items-center gap-2">
+                  <a href="/signin" className="flex items-center gap-2">
                     <Heart className="w-4 h-4" />
                     Become a Donor
                   </a>
